@@ -1,0 +1,1216 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5faff;
+}
+.navbar {
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color:  #a2d2ff; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color:white; 
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.nav-links li a:hover {
+    background-color: #ffffff;
+    color: #0077cc;
+    transform: scale(1.05);
+}
+.nav-links li a.active {
+    color: #062338;
+}
+
+.nav-links li a.active::after {
+    transform: scaleX(1);
+}
+.wter-section {
+    margin-top: 100px;
+    padding: 100px 0;
+    background-color: #f5faff; 
+    text-align: center;
+}
+
+.wter-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.wter-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    transition: transform 0.3s ease;
+}
+
+.wter-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.wter-item h3 {
+    font-size: 16px;
+    color: #0077cc; 
+    margin: 0;
+}
+
+.wter-item:hover {
+    transform: scale(1.1);
+}
+
+.discipline-section {
+    position: relative; 
+    width: 100%;
+    height: 80vh;
+    background: url('../static/disciplinsection.jpeg') no-repeat ;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    opacity: 0.9; 
+    color:#ffffff;
+}
+
+.discipline-section::before {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); 
+    z-index: 1;
+}
+
+.discipline-container {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+}
+
+.tips-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px 20px;
+    gap: 30px;
+    background-color:#a2d2ff; 
+}
+
+.tip {
+    width: 250px;
+    height: 300px;
+    border-radius: 15px;
+    margin-left: 35px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 0; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    background-size: cover;       
+    background-repeat: no-repeat;
+    background-position: center;  
+}
+
+.tip::before {
+    content: '';
+    position: absolute;
+    top:0; left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6); 
+    z-index: 1;
+}
+
+.tip-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px; 
+    color: white;
+    text-align: center;
+}
+
+.tip:hover {
+    transform: scale(1.05);
+}
+
+#pray {
+    background-image: url('../static/praytips.jpeg');
+}
+
+#eat {
+    background-image: url('../static/eattips.jpeg');
+}
+
+#workout {
+    background-image: url('../static/traintips.jpeg');
+}
+#sleep {
+    background-image: url('../static/sleep.jpeg');
+}
+
+#water {
+    background-image: url('../static/water.jpeg');
+}
+
+#focus {
+    background-image: url('../static/foucs.jpeg');
+  
+}
+#routine {
+    background-image: url('../static/routein.jpeg'); 
+  }
+#mentalhealth { 
+    background-image: url('../static/mental-health.jpeg');
+  }
+  /*workout*/
+  #strength {
+  background-image: url('../static/strength.jpeg');
+}
+
+#cardio {
+  background-image: url('../static/cardio.jpeg');
+}
+
+#flexibility {
+  background-image: url('../static/flexibility.jpeg');
+}
+
+#recovery {
+  background-image: url('../static/recovery.jpeg');
+}
+/*nutrition page*/
+#fruits { 
+  background-image: url('../static/fruits.jpeg');
+  }
+#vegetables { 
+  background-image: url('../static/vegetabels.jpeg'); 
+}
+#protein {
+    background-image: url('../static/protein.jpeg'); 
+  }
+#hydration { 
+    background-image: url('../static/Hydration.jpeg');
+  }
+#wholegrains {
+    background-image: url('../static/grains.jpeg');
+  }
+#healthyfats {
+    background-image: url('../static/healthy-fats.jpeg'); 
+  }
+#dairy { 
+    background-image: url('../static/dairy.jpeg'); 
+  }
+#snacks { 
+    background-image: url('../static/healthy-snacks.jpeg');
+  }
+
+.tip h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #a2d2ff; 
+}
+
+.tip p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.aboutus {
+  padding: 20px 20px;
+  background-color:  #38648d; 
+  color: #f5efe6; 
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-text {
+  flex: 1 1 400px;
+  font-size: 1.1em;
+  line-height: 1.9;
+}
+
+.about-text p:first-child {
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.about-text h3 {
+  margin-bottom: 15px;
+  font-size: 42px;
+  color: #000000;
+}
+
+.about-image {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: 0.4s;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+.cta {
+  margin-top: 30px;
+}
+/* زرار التسجيل / الدخول */
+.login-btn {
+  background-color: #ffffff;      /* خلفية بيضاء */
+  color: #38648d;                 /* لون أزرق غامق متناسق مع الtheme */
+  padding: 12px 30px;             /* المسافة داخل الزرار */
+  font-size: 1.1em;               /* حجم الخط */
+  font-weight: bold;              /* خط ثقيل */
+  border-radius: 25px;            /* حواف دائرية */
+  text-decoration: none;          /* إزالة الخط السفلي */
+  transition: 0.3s;               /* انتقال سلس عند hover */
+  display: inline-block; 
+         /* عشان يبقى قابل للضغط */
+  
+}
+
+.login-btn:hover {
+  background-color: #ffffff;      /* نفس الخلفية */
+  transform: scale(1.07);         /* يكبر شوي عند المرور بالماوس */
+}
+
+
+
+
+
+.copyright h5{
+   text-align: center;
+    color: #0077cc;
+}
+
+/* ====== Login/Register Page ====== */
+.login-page {
+  min-height: 100vh;
+  background: linear-gradient(to right, #a2d2ff, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.login-container {
+  background: white;
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 950px;
+  width: 100%;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* Image Section */
+.login-image {
+  flex: 1;
+}
+
+.login-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Form Section */
+.login-form {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-form h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+  color: #0077cc;
+}
+
+.login-form h3 {
+  color: #a2d2ff;
+  margin-bottom: 25px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.login-form input:focus {
+  border-color: #a2d2ff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(162,210,255,0.5);
+}
+
+/* Button */
+.login-form button {
+  padding: 12px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 20px;
+}
+
+.login-form button:hover {
+  background-color: #005fa3;
+  transform: scale(1.05);
+}
+
+/* Register Link */
+.register-link {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #0077cc;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 80px;
+  text-align: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 100px;
+  margin: 20px 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.inputs input {
+  padding: 8px 15px;
+  width: 100px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 2px solid #0077cc;
+  font-size: 16px;
+}
+.inputs button {
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 5px;
+  border: none;
+  background: #0077cc;
+  color: white;
+  cursor: pointer;
+}
+.inputs button:hover { background: #005fa3; }
+
+.bmi-bar {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background: #eee;
+  border-radius: 5px;
+  margin: 20px 0px 70px;
+  
+}
+#bmiIndicator {
+  position: absolute;
+  width: 6px;
+  height: 20px;
+  top: -5px;
+  background: green;
+}
+
+.card canvas {
+  margin: 15px auto;
+  display: block;
+}
+
+.card p { margin: 5px 0; font-size: 14px; }
+
+.card input {
+  padding: 8px;
+  width: 120px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 2px solid #0077cc;
+}
+.card button {
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+  background: #0077cc;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.card button:hover { 
+  background: #005fa3;
+  
+  transform: scale(1.05);
+}
+
+.water-card canvas { background: #fff; border-radius: 50%; }
+.sleep-card canvas { background: #fff; border-radius: 50%; }
+
+.nap-reminder-card {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f0f8ff;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.nap-reminder-card input {
+    width: 60%;
+    padding: 8px;
+    margin: 10px 5px;
+    border-radius: 10px;
+    border: 1px solid #0077cc;
+    font-size: 16px;
+    text-align: center;
+}
+
+.nap-reminder-card button {
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+    background: #0077cc;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nap-reminder-card button:hover {
+    background: #005fa3;
+    transform: scale(1.05);
+}
+/*workout*/
+
+.planner h1{
+  text-align:center;
+  margin-top:110px;
+  margin-bottom: 30px;
+}
+.setup{
+  text-align:center;
+  margin:30px 0 30px;
+}
+#daysInput{
+  width:100px;
+  padding:7px 10px;
+  margin-right:10px;
+  border-radius:10px;
+  border:3px solid #0077cc;
+}
+button{
+  padding:6px 12px;
+  background:#0077cc;
+  color:white;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+}
+button:hover{
+  background:#005fa3;
+  transform: scale(1.05);
+}
+.toggleDay{
+  width:20px;
+  cursor:pointer;
+  transform:rotate(0deg);
+}
+.dayNameInput{
+  color:black;
+  font-weight:bold;
+  font-size:1.1em;
+  border:none;
+  background:transparent;
+  width:150px;
+}
+.deleteDayBtn{
+  margin-left:  500px ;
+  background:red;
+  color:white;
+  border:none;
+  border-radius:4px;
+  padding:10px 6px;
+  cursor:pointer;
+}
+.deleteDayBtn:hover{
+  background:#961717;
+  transform: scale(1.05);
+
+}
+.exercise-container{
+  display:none
+}
+.day-card{
+  background: rgb(174, 204, 220);
+  padding:20px;
+  margin:20px auto;
+  border-radius:20px;
+  max-width:800px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.toggleExercise{
+  width:18px;
+  cursor:pointer;
+  transform:rotate(0deg);
+}
+.deleteExerciseBtn{
+  margin-left:690px;
+  background:red;
+  color:white;
+  border:none;
+  border-radius:4px;
+  padding:2px 5px;
+  cursor:pointer;
+}
+.deleteExerciseBtn:hover{
+  background:#961717;
+  transform: scale(1.05);
+
+}
+.exerciseName{
+  width:150px;
+  padding:7px 10px;
+  margin-right:10px;
+  border-radius:10px;
+  border:3px solid #0077cc;
+  margin-bottom: 30px;
+}
+.equipmentSelect{
+  width:150px;
+  padding:7px 10px;
+  margin-right:10px;
+  border-radius:10px;
+  border:3px solid #0077cc;
+}
+.setsInput{
+  width:50px;
+  padding:7px 10px;
+  margin-right:10px;
+  border-radius:10px;
+  border:3px solid #0077cc;
+
+}
+
+.small-input-weight{
+  width:80px;
+  padding:7px 10px;
+  margin:0 50px 30px 50px;
+  border-radius:10px;
+  border:3px solid #0077cc;
+
+}
+.small-input-reps{
+  width:80px;
+  padding:7px 10px;
+  margin:0 50px 30px 50px;
+  border-radius:10px;
+  border:3px solid #0077cc;
+
+}
+.failure-checkbox{
+  width:20px;
+  height: 20px;
+  accent-color: #0077cc;
+ 
+}
+
+
+
+/* ==========================
+   Container المكتبة
+========================== */
+.exercise-library {
+  text-align: center;
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #0077cc;
+  border-radius: 15px;
+  background-color: #f7f9fc;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* عنوان المكتبة */
+.exercise-library h3 {
+ 
+  color: #0077cc;
+  margin-bottom: 15px;
+}
+
+/* Dropdowns و Buttons */
+.exercise-library select {
+  padding: 10px 15px;
+  margin: 10px 5px;
+  border-radius: 10px;
+  border: 2px solid #0077cc;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: white;
+  transition: 0.3s;
+}
+
+
+.exercise-library button{
+   padding: 10px 15px;
+  margin: 10px 5px;
+  border-radius: 10px;
+  border: 2px solid #0077cc;
+  font-size: 14px;
+  cursor: pointer;
+  background-color:#0077cc;
+  transition: 0.3s;
+
+}
+.exercise-library button:hover {
+  background-color:#005fa3;
+  color: white;
+}
+/* ==========================
+   Video Library Grid
+========================== */
+.video-library {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  max-height: 300px; /* Scrollable */
+  overflow-y: auto;
+  margin: 10px 0 20px 0;
+  padding-right: 5px; /* عشان scrollbar مش يغطي المحتوى */
+}
+
+/* Video Card */
+.video-card {
+  flex: 1 1 200px; /* تقريباً 200px لكل كرت */
+  border: 2px solid #0077cc;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgb(174, 204, 220);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Video iframe */
+.video-card iframe {
+  border-radius: 10px;
+  margin-top: 8px;
+  width: 100%;
+  height: 120px;
+}
+
+/* Checkbox + label */
+.video-card input[type="checkbox"] {
+  accent-color: #0077cc;
+  transform: scale(1.2);
+  margin-right: 5px;
+}
+
+.video-card label {
+  font-weight: 500;
+  color: #333;
+}
+.rest-timer {
+  border: 2px solid #0077cc;
+  border-radius: 10px;
+  padding: 20px;
+  width: 908px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 20px auto;
+
+}
+
+.rest-timer h3 {
+  margin-bottom: 10px;
+  color: #0077cc;
+}
+
+.rest-timer .restDisplay {
+  
+  margin: 15px 0;
+
+}
+
+.rest-timer input {
+  width: 60px;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 2px solid #0077cc;
+  text-align: center;
+}
+
+.rest-timer button {
+  padding: 5px 10px;
+  margin: 5px;
+  width: 80px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  background-color: #0077cc;
+  color: white;
+  cursor: pointer;
+}
+
+.rest-timer button:hover {
+  background-color: #005fa3;
+  transform: scale(1.03);
+}
+
+/*nutrition*/
+/* =======================================
+   Nutrition Section Styling
+======================================= */
+/*day section*/
+.day-section{
+  margin-top: 200px;
+}
+/* ===== CALORIE SECTION ===== */
+.calorie-section {
+  max-width: 450px;
+  margin: 100px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+.calorie-section:hover {
+  transform: translateY(-50px);
+}
+.calorie-section h2 {
+  color: #0077cc;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ===== Calculator Section ===== */
+.calculator-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.calculator-container select,
+.calculator-container input {
+  width: 200px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #0077cc;
+}
+
+.calculator-container button {
+  width: 100%;
+  max-width: 450px;
+  padding: 10px 20px;
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.calculator-container button:hover {
+  background: #005fa3;
+}
+
+#calorieResult {
+  font-weight: 600;
+  text-align: center;
+  margin-top: 10px;
+  color: #0077cc;
+}
+
+/* ===== DAY CARD (مكبر) ===== */
+.days-cards {
+  background: #fff;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 20px;
+  width: 420px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  text-align: center;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.days-cards:hover {
+  transform: translateY(-50px);
+}
+
+/* ===== Circle Container ===== */
+.circle-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 15px;
+}
+
+.progress-circle {
+  transform: rotate(-90deg);
+}
+
+.bg-circle,
+.fg-circle {
+  fill: none;
+  stroke-width: 10;
+}
+
+.bg-circle {
+  stroke: #eee;
+}
+
+.fg-circle {
+  stroke: #0077cc;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.circle-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #0077cc;
+}
+
+/* ===== Calories Info ===== */
+.calories-info {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+/* ===== Meals Section ===== */
+.add-meal-container {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.add-meal-container input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 2px solid #0077cc;
+}
+
+.add-meal-container button {
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+.add-meal-container button:hover {
+  background: #005fa3;
+}
+
+/* ===== Meal Items ===== */
+.meals div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.meals input {
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid #0077cc;
+}
+
+.meals button {
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.meals button:hover {
+  background: #cc0000;
+}
+
+/* ===== Day Navigation ===== */
+.day-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.day-nav button {
+  background: #0077cc;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.day-nav button:hover {
+  background: #005fa3;
+}
+
+/*search tool */
+.calorie-search{
+    width: 420px;
+    margin: 40px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.calorie-search h2{
+    margin-bottom: 20px;
+    color: #0077cc;
+}
+
+#foodInput{
+    width: 80%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+}
+
+#foodInput:focus{
+    border-color: #0077cc;
+}
+
+#searchBtn{
+    margin-top: 20px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 10px;
+    background-color:#0077cc ;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#searchBtn:hover{
+    background-color: #005fa3;
+}
+
+#results{
+    margin-top: 20px;
+}
+
+.food-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 12px;
+    margin-top: 8px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.total{
+    margin-top: 15px;
+    padding: 12px;
+    background:#0077cc;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+
+
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #8ebade;
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  cursor: default;
+  margin-bottom: 10px;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+  /* navbar */
+  .navbar {
+    padding: 10px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  /* login */
+  .login-container {
+    flex-direction: column;
+  }
+
+  .login-form {
+    padding: 20px;
+  }
+
+  /* sections */
+  .tips-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tip {
+    width: 90%;
+    margin-left: 0;
+  }
+
+  /* about */
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* cards */
+  .card {
+    padding: 20px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  /* workout buttons fix */
+  .deleteDayBtn {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .deleteExerciseBtn {
+    margin-left: 0;
+  }
+
+  /* inputs */
+  .small-input-weight,
+  .small-input-reps {
+    margin: 10px;
+    width: 70px;
+  }
+
+  /* rest timer */
+  .rest-timer {
+    width: 90%;
+  }
+
+  /* calorie section */
+  .calorie-section,
+  .days-cards,
+  .calorie-search {
+    width: 90%;
+  }
+
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/discipline.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/discipline.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../static/main.js" defer></script>
+    <title>Discipline | Progress</title>
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <h1 class="logo">Discipline</h1>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="workout.html">Workouts</a></li>
+            <li><a href="nutrition.html">Nutrition</a></li>
+            <li><a href="progress.html" class="active">Progress</a></li>
+
+            <li id="loginItem"><a href="login.html">Login</a></li>
+            <li>
+                <div id="avatar" class="avatar" style="display:none;"></div>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+
+    <!-- ===== BODY INFO ===== -->
+    <section class="card bmi-card">
+        <h1>Progress Tracker</h1>
+
+        <div class="inputs">
+            <div>
+                <label>
+                    Height (cm):
+                    <input type="number" id="heightInput">
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    Weight (kg):
+                    <input type="number" id="weightInput">
+                </label>
+            </div>
+
+            <button onclick="saveBody()">Save</button>
+        </div>
+
+        <h2>BMI</h2>
+        <p id="bmiText"></p>
+
+        <div class="bmi-bar">
+            <div id="bmiIndicator"></div>
+        </div>
+
+        <canvas id="weightChart" width="600" height="250"></canvas>
+    </section>
+
+    <!-- ===== WATER ===== -->
+    <section class="card water-card">
+        <h2>Water Intake 💧</h2>
+
+        <canvas id="waterCircle" width="200" height="200"></canvas>
+        <p id="waterInfo"></p>
+
+        <input type="number" id="waterGoalInput" placeholder="Set water goal (L)">
+        <button onclick="setWaterGoal()">Set Goal</button>
+        <button onclick="addWater()">+0.2 L</button>
+        <button onclick="resetWater()">Reset</button>
+    </section>
+
+    <!-- ===== SLEEP ===== -->
+    <section class="card sleep-card">
+        <h2>Sleep 🌙</h2>
+
+        <canvas id="sleepCircle" width="200" height="200"></canvas>
+        <p id="sleepInfo"></p>
+
+        <input type="number" id="sleepGoalInput" placeholder="Set sleep goal (hrs)">
+        <button onclick="setSleepGoal()">Set Goal</button>
+        <button onclick="addSleep()">+1 hr</button>
+        <button onclick="resetSleep()">Reset</button>
+    </section>
+
+    <!-- ===== WATER REMINDER ===== -->
+    <section class="card reminder-card">
+        <h2>Water Reminder</h2>
+
+        <input type="number" id="reminderInterval" placeholder="Minutes">
+        <button onclick="startWaterReminder()">Start Reminder</button>
+        <button onclick="stopWaterReminder()">Stop Reminder</button>
+    </section>
+
+    <div class="nap-reminder-card">
+        <h3>💤 Nap Reminder</h3>
+        <input type="number" id="napInput" placeholder="Nap duration in minutes" min="1">
+        <button onclick="startNapReminder()">Start Nap</button>
+        <button onclick="stopNapReminder()">Stop Nap</button>
+    </div>
+
+</div>
+
+<section class="copyright">
+    <h5>
+        2026 &copy; All rights reserved to Eng-Sarah Montaser
+    </h5>
+</section>
+
+</body>
+</html>

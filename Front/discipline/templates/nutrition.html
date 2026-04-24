@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/discipline.png" type="image/png">
+    <link rel="stylesheet" href="../static/discipline.css">
+    <script src="../static/main.js"></script>
+    <title>Discipline | Nutrition</title>
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <h1 class="logo">Discipline</h1>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="workout.html">Workouts</a></li>
+            <li><a href="nutrition.html" class="active">Nutrition</a></li>
+            <li><a href="progress.html">Progress</a></li>
+
+            <li id="loginItem"><a href="login.html">Login</a></li>
+            <li>
+                <div id="avatar" class="avatar" style="display:none;"></div>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ===== DAY CARD CONTAINER ===== -->
+<section class="day-section">
+    <div id="day-Container"></div>
+</section>
+
+<!-- ===== CALORIE CALCULATOR ===== -->
+<section class="calorie-section">
+    <h2>Daily Calorie Calculator</h2>
+
+    <div class="calculator-container">
+        <select id="genderSelect">
+            <option value="">Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+
+        <input type="number" id="ageInput" placeholder="Age">
+        <input type="number" id="heightInputCalc" placeholder="Height (cm)">
+        <input type="number" id="weightInputCalc" placeholder="Weight (kg)">
+
+        <select id="activitySelect">
+            <option value="">Activity Level</option>
+            <option value="1.2">Sedentary</option>
+            <option value="1.375">Lightly Active</option>
+            <option value="1.55">Moderately Active</option>
+            <option value="1.725">Very Active</option>
+            <option value="1.9">Extra Active</option>
+        </select>
+
+        <button onclick="calculateCalories()">Calculate</button>
+    </div>
+
+    <p id="calorieResult">Daily Calories: 0 cal</p>
+</section>
+
+<div class="calorie-search">
+    <h2>Food Calories Calculator</h2>
+    <input type="text" id="foodInput" placeholder="e.g. egg bread cheese">
+    <button id="searchBtn">Search</button>
+    <div id="results"></div>
+</div>
+
+<section class="tips-section">
+
+    <div class="tip" id="fruits">
+        <div class="tip-content">
+            <h3>Fruits</h3>
+            <p>Include a variety of fruits daily to get essential vitamins and antioxidants.</p>
+        </div>
+    </div>
+
+    <div class="tip" id="vegetables">
+        <div class="tip-content">
+            <h3>Vegetables</h3>
+            <p>Eat colorful vegetables to provide fiber, minerals, and vitamins for your body.</p>
+        </div>
+    </div>
+
+    <div class="tip" id="protein">
+        <div class="tip-content">
+            <h3>Protein</h3>
+            <p>Include lean proteins like chicken, fish, eggs, and legumes to build and repair muscles.</p>
+        </div>
+    </div>
+
+    <div class="tip" id="hydration">
+        <div class="tip-content">
+            <h3>Hydration</h3>
+            <p>Drink plenty of water daily to keep your body hydrated and support digestion.</p>
+        </div>
+    </div>
+
+    <div class="tip" id="wholegrains">
+        <div class="tip-content">
+            <h3>Whole Grains</h3>
+            <p>Choose whole grains like oats, brown rice, and quinoa for sustained energy.</p>
+        </div>
+    </div>
+
+    <div class="tip" id="healthyfats">
+        <div class="tip-content">
+            <h3>Healthy Fats</h3>
+            <p>Include sources of healthy fats like nuts, seeds, and olive oil for heart health.</p>
+        </div>
+    </div>
+
+    <div class="tip" id="dairy">
+        <div class="tip-content">
+            <h3>Dairy</h3>
+            <p>Consume dairy or alternatives like milk, cheese, or yogurt for calcium and bone strength.</p>
+        </div>
+    </div>
+
+    <div class="tip" id="snacks">
+        <div class="tip-content">
+            <h3>Healthy Snacks</h3>
+            <p>Choose healthy snacks like fruits, nuts, or yogurt instead of processed junk food.</p>
+        </div>
+    </div>
+
+</section>
+
+<section class="copyright">
+    <h5>
+        2026 &copy; All rights reserved to Eng-Sarah Montaser
+    </h5>
+</section>
+
+</body>
+</html>

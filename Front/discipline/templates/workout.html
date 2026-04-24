@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/discipline.png" type="image/png">
+    <link rel="stylesheet" href="../static/discipline.css">
+    <script src="../static/main.js"></script>
+    <title>Discipline | Workout</title>
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <h1 class="logo">Discipline</h1>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="workout.html" class="active">Workouts</a></li>
+            <li><a href="nutrition.html">Nutrition</a></li>
+            <li><a href="progress.html">Progress</a></li>
+
+            <li id="loginItem"><a href="login.html">Login</a></li>
+            <li>
+                <div id="avatar" class="avatar" style="display:none;"></div>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<section class="planner">
+    <h1>🏋 Workout Planner</h1>
+
+    <div class="setup">
+        <input type="number" id="daysInput" placeholder="Workout Days" min="1" max="7">
+        <button onclick="generateDays()">Generate</button>
+    </div>
+
+    <div id="workoutContainer"></div>
+</section>
+
+<div class="exercise-library">
+    <h3>Exercise Library 🏋️‍♀️</h3>
+
+    <label>Choose Muscle:</label>
+    <select id="muscleSelect" onchange="showExerciseVideos()">
+        <option value="">Select Muscle</option>
+        <option value="Chest">Chest</option>
+        <option value="Back">Back</option>
+        <option value="Legs">Legs</option>
+        <option value="Shoulders">Shoulders</option>
+        <option value="Arms">Arms</option>
+        <option value="Core">Core</option>
+    </select>
+
+    <div id="videoLibrary" class="video-library">
+        <!-- هنا هتظهر فيديوهات العضلة -->
+    </div>
+
+    <label>Choose Day:</label>
+
+    <select id="daySelect">
+        <option value="">New Day</option>
+    </select>
+
+    <button onclick="addSelectedVideosToDay()">Add to Day</button>
+</div>
+
+<div id="timerContainer" class="rest-timer">
+    <h3>Rest Timer ⏱️</h3>
+
+    <label>Duration (seconds):</label>
+    <input type="number" id="restTimeInput" value="60" min="5">
+
+    <div>
+        <button id="startStopBtn">Start</button>
+        <button id="resetBtn">Reset</button>
+    </div>
+
+    <div id="restDisplay">01:00</div>
+</div>
+
+<section class="tips-section">
+
+    <div class="tip" id="strength">
+        <div class="tip-content">
+            <h3>Strength</h3>
+            <p>Focus on building strength gradually with proper form and progressive overload.</p>
+        </div>
+    </div>
+
+    <div class="tip" id="cardio">
+        <div class="tip-content">
+            <h3>Cardio</h3>
+            <p>Include cardio workouts to improve endurance and heart health.</p>
+        </div>
+    </div>
+
+    <div class="tip" id="flexibility">
+        <div class="tip-content">
+            <h3>Flexibility</h3>
+            <p>Stretch regularly to maintain flexibility and prevent injuries.</p>
+        </div>
+    </div>
+
+    <div class="tip" id="recovery">
+        <div class="tip-content">
+            <h3>Recovery</h3>
+            <p>Allow your muscles to recover between sessions to maximize gains.</p>
+        </div>
+    </div>
+
+</section>
+
+<section class="copyright">
+    <h5>
+        2026 &copy; All rights reserved to Eng-Sarah Montaser
+    </h5>
+</section>
+
+</body>
+</html>
